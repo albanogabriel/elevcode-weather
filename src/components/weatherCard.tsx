@@ -2,9 +2,10 @@ import { WeatherInput } from "./weatherInput";
 
 import cloudWeather from '../assets/cloud.png'
 
-import humidity from '../assets/humidity.png'
-import wind from '../assets/wind.png'
+
 import { useEffect } from "react";
+import { WeatherCelcius } from "./weatherCelcius";
+import { WeatherInfo } from "./weatherInfo";
 
 export function WeatherCard(){
 
@@ -24,32 +25,10 @@ export function WeatherCard(){
       <WeatherInput />
       <img src={cloudWeather} style={{ height: 'auto', width: '250px' }} />
       
-      <div>
-        <h1>
-          18º
-        </h1>
-        <p>
-          Broken Clouds
-        </p>
-      </div>
+      <WeatherCelcius />
 
-     <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between'}}>
-      <div style={{ display: 'flex', gap: '12px' }}>
-        <img src={humidity} style={{ width: '36px', height: 'auto' }} />
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}} >
-          <span>55%</span>
-          <span>Humidity</span>
-        </div>
-      </div>
-
-      <div style={{ display: 'flex', gap: '12px' }}>
-        <img src={wind} />
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-          <span>0Km/h</span>
-          <span>Wind Speed</span>
-        </div>
-      </div>
-     </div>
+      <WeatherInfo />
+     
     </div>
   )
 }
