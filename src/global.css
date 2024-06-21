@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, lightblue, blue);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button { /* Por padrão esses elementos(input, textarea, button. Não herdam a font do body, eles tem sua própria customização de font */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem; /* usa isso para que tenha o mesmo padrão de fonte 1rem = 16px */
+}
